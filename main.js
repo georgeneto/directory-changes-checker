@@ -22,6 +22,10 @@ const run = async () => {
             head: "HEAD"
         })
 
+        
+        console.log(JSON.parse(response.data))
+        console.log(JSON.parse(response.data.files))
+
         let filteredFiles = (response.data.files || []).filter(file => {
             console.log(JSON.parse(file))
             return regExp.test(file.filename)
