@@ -17,7 +17,7 @@ const run = async () => {
         
         let response = await octokit.rest.repos.compareCommitsWithBasehead()
 
-        let filteredFiles = response.data.files?.filter(file => {
+        let filteredFiles = (response.data.files || []).filter(file => {
             console.log(JSON.parse(file))
             return regExp.test(file.filename)
         })
