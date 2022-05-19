@@ -8,7 +8,6 @@ const octokit = github.getOctokit(token);
 
 
 const run = async () => {
-    console.log(github.context)
 
     try{
         let regExp = RegExp(directory)
