@@ -15,9 +15,11 @@ const run = async () => {
         console.log(`Raw input: ${directory}`)
         console.log(`Regex: ${regExp.toString()}`)
         
-        let response = await octokit.rest.repos.compareCommitsWithBasehead({
+        let response = await octokit.rest.repos.compareCommits({
             owner: github.context.repo.owner,
-            repo: github.context.repo.repo
+            repo: github.context.repo.repo,
+            base: "HEAD^",
+            head: "HEAD"
         })
 
         let filteredFiles = (response.data.files || []).filter(file => {
