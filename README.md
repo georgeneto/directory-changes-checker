@@ -1,14 +1,15 @@
 # directory-changes-checker
 
-Action to find out rather a directory had changes or not in last commit
-Looks for the list of files changed in the last commit. If given directory is present in the changes it returns true, otherwise, returns false
-
+Action to find out rather a directory had changes or not in last commit.\
+Looks for the list of files changed in the last commit. If given directory is present in the changes it returns true, otherwise, returns false.
+\
+\
 eg: *directory*: **"checker"**
 
-      -*my/dir/file.exe* is not a match
-      -*test/my-checker/* is not a match
-      -*test/my/checker/* is a match
-      -*checker/subfolder* is a match
+*my/dir/file.exe* []is not a match ❌ \
+*test/my-checker/* is not a match ❌ \
+*test/my/checker/* is a match ✅ \
+*checker/subfolder* is a match ✅
 
 
 
