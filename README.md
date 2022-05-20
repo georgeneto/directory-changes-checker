@@ -6,7 +6,7 @@ Looks for the list of files changed in the last commit. If given directory is pr
 \
 eg: *directory*: **"checker"**
 
-*my/dir/file.exe* []is not a match ❌ \
+*my/dir/file.exe* is not a match ❌ \
 *test/my-checker/* is not a match ❌ \
 *test/my/checker/* is a match ✅ \
 *checker/subfolder* is a match ✅
