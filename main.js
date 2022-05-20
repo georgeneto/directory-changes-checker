@@ -35,12 +35,12 @@ const run = async () => {
             console.log("No matchs found.")
             console.log(`Raw input: ${directory}`)
             console.log(`Regex: ${regExp.toString()}`)
-            return false
+            core.setOutput("hasChanges", false)
         } 
 
         console.log(`Found a total of ${filteredFiles.length} matches`)
 
-        return true
+        core.setOutput("hasChanges", true)
 
     }catch(e){
         console.log("FAIL", e)
