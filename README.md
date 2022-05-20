@@ -20,6 +20,9 @@ steps:
         with:
           repo-token: ${{secrets.GITHUB_TOKEN}}
           directory: "{REPLACE_BY_DIRECTORY_NAME}"
+          
+      - name: Any other step
+        if: ${{steps.directory_changes_checker.output.hasChanges}} == 'true' #running other step only if directory is found in the list of files from last commit
 ```          
           
 and the boolean output may be used as:
