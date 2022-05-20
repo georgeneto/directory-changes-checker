@@ -14,6 +14,7 @@ eg: *directory*: **"checker"**
 
 steps:
 ```yaml
+      ...
       - name: Check if directory has changes
         id: directory_changes_checker
         uses: georgeneto/directory-changes-checker
@@ -23,6 +24,7 @@ steps:
           
       - name: Any other step
         if: ${{steps.directory_changes_checker.output.hasChanges}} == 'true' #running other step only if directory is found in the list of files from last commit
+        ...
 ```          
           
 and the boolean output may be used as:
