@@ -18,7 +18,7 @@ steps:
       ...
       - name: Check if directory has changes
         id: directory_changes_checker
-        uses: georgeneto/directory-changes-checker
+        uses: georgeneto/directory-changes-checker@v1
         with:
           repo-token: ${{secrets.GITHUB_TOKEN}}
           directory: "{REPLACE_BY_DIRECTORY_NAME}"
