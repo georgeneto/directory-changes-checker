@@ -22,10 +22,6 @@ const run = async () => {
             head: "HEAD"
         })
 
-        
-        console.log(JSON.stringify(response.data))
-        console.log(JSON.stringify(response.data.files))
-
         let filteredFiles = (response.data.files || []).filter(file => {
             let isMatch = regExp.test(file.filename)
             console.log(`[${isMatch && '[** match **]'} ${file.filename}`)
