@@ -1,6 +1,6 @@
 # directory-changes-checker
 
-Action to find out rather a directory had changes or not in last commit.\
+Action to find out whether a directory had changes or not in last commit.\
 Looks for the list of files changed in the last commit. If given directory is present in the changes it returns true, otherwise, returns false.
 \
 \
